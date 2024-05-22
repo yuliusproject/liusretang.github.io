@@ -29,11 +29,107 @@ section {
   padding: 4px;
 }
 
+#my-codingan {
+  background-color: #abb0c0;
+}
+
 .warna {
   color: aquamarine;
 }
 
 .col-md-4 b {
   color: #002cbe;
+}
+
+/* my codingan section */
+.codingan-box {
+  position: relative;
+  background-color: #198754;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.codingan-box::before {
+  content: 'My';
+  position: absolute;
+  color: aliceblue;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.codingan-box:hover::before {
+  opacity: 0.2;
+}
+
+.codingan-box::after {
+  content: 'CAR';
+  position: absolute;
+  color: aliceblue;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.codingan-box:hover::after {
+  opacity: 0.2;
+}
+
+.codingan-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.codingan-box:hover .codingan-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.codingan-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  left: 50%;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.codingan-box:hover .codingan-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.codingan-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 350px;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.codingan-box:hover .codingan-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
 }
 
